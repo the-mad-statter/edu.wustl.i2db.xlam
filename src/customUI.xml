@@ -1,0 +1,25 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon startFromScratch="false">
+		<tabs>
+			<tab id="I2DBTab" label="I2DB">
+				<group id="infoGroup" label="Info">
+					<button id="InfoAboutButton" label="About" image="icon_brookings_x0040_4x_red" size="large" onAction="I2DB.Info.About" />
+				</group>
+				<group id="FillGroup" label="Fill">
+					<button id="FillEmptyCellsButton" label="Empty Cells" imageMso="EditText" size="large" onAction="I2DB.Fill.EmptyCells" />
+				</group>
+				<group id="InsertGroup" label="Insert">
+					<button id="InsertMultiRowsButton" label="MultiRows" imageMso="SheetRowsInsert" size="normal" onAction="I2DB.Insert.MultiRows" />
+					<button id="InsertMultiColsButton" label="MultiColumns" imageMso="SheetColumnsInsert" size="normal" onAction="I2DB.Insert.MultiCols" />
+				</group>
+				<group id="OffsetDeleteGroup" label="Offset Delete">
+					<button id="OffsetDeleteRowButton" label="Rows" imageMso="SheetRowsDelete" size="normal" onAction="I2DB.OffsetDelete.Row" />
+					<button id="OffsetDeleteColButton" label="Columns" imageMso="SheetColumnsDelete" size="normal" onAction="I2DB.OffsetDelete.Col" />
+				</group>
+				<group id="MetaGroup" label="Meta">
+					<button id="MetaReportHiddenDimsButton" label="Report Hidden" imageMso="HideDetails" size="large" onAction="I2DB.Meta.ReportHiddenDims" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

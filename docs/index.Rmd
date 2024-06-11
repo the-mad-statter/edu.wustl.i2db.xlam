@@ -1,0 +1,83 @@
+---
+title: edu.wustl.i2db.xlam
+output:
+  html_document:
+    theme: simplex
+    toc: TRUE
+    toc_float: TRUE
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+params:
+  github: the-mad-statter
+  package: edu.wustl.i2db.xlam
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Installation
+  
+1. Download the latest [release](https://github.com/`r params$github`/`r params$package`/releases)
+2. Place the "`r params$package`" file in C:\\Users\\&lt;your account&gt;\\AppData\\Roaming\\Microsoft\\AddIns
+3. Right click the file, select Properties, and unblock the file (if necessary)
+4. Open Excel
+5. Click Options
+6. Click Add-ins
+7. Make sure "Excel Add-ins" is selected in the Manage drop down box and click the Go button
+8. Check the box next to "`r params$package`" and click the OK button
+
+![](img/install.gif)
+
+# Ribbon
+
+## Fill
+
+### Empty Cells
+
+Fill empty cells in a selection with a given value.
+
+![](img/fill-empty_cells.gif)
+
+## Insert
+
+### MultiRows
+
+Insert multiple rows at one time above the current selection.
+
+![](img/insert-multirows.gif)
+
+### MultiColumns
+
+Insert multiple columns at one time to the left of the current selection.
+
+![](img/insert-multicolumns.gif)
+
+## Offset Delete
+
+### Rows
+
+Delete every so many other rows in a selection.
+
+![](img/offset_delete-rows.gif)
+
+### Columns
+
+Delete every so many other columns in a section.
+
+![](img/offset_delete-columns.gif)
+
+## Meta
+
+### Report Hidden
+
+See a report on the presence of any hidden rows or columns.
+
+![](img/meta-report_hidden.gif)
+
+# Functions
+
+## =I2DB_HMACSHA256(value, key)
+
+Given a value and secret key, compute a Hash-based Message Authentication Code (HMAC) using the SHA256 hash function
+
+![](img/function-i2db_hmacsha256.gif)
