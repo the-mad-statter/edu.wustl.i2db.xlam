@@ -81,3 +81,15 @@ See a report on the presence of any hidden rows or columns.
 Given a value and secret key, compute a Hash-based Message Authentication Code (HMAC) using the SHA256 hash function
 
 ![](img/function-i2db_hmacsha256.gif)
+
+## =I2DB_CODE(value)
+
+Vectorized version of CODE() that converts each character of a string from Unicode to the default code page of the system and spills results to the right
+
+![](img/function-i2db_code.gif)
+
+## =I2DB_TRIM(value)
+
+Version of TRIM() that removes all non-printable characters including non-breaking spaces
+
+![](img/function-i2db_trim.gif)

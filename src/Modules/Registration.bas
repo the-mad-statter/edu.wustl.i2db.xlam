@@ -6,10 +6,11 @@ Public Sub DoRegisterUDFs()
 ' Register the public UDFs defined in this add-in.
 '
 ' @author Matt Schuelke
-' @copyright 2024
+' @copyright 2025
 '
 
     Hashing.RegisterUDFs
+    Trim.RegisterUDFs
     
 End Sub
 
@@ -20,10 +21,10 @@ Public Sub DeRegisterUDFs()
 ' DeRegister the public UDFs defined in this add-in.
 '
 ' @author Matt Schuelke
-' @copyright 2024
+' @copyright 2025
 '
 
     Hashing.DeRegisterUDFs
+    Trim.DeRegisterUDFs
     
 End Sub
-
