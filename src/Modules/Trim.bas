@@ -1,5 +1,7 @@
 Attribute VB_Name = "Trim"
 Public Function I2DB_CODE(ByVal value As String)
+Attribute I2DB_CODE.VB_Description = "Vectorized version of CODE() that converts each character of a string from Unicode to the default code page of the system and spills results to the right"
+Attribute I2DB_CODE.VB_ProcData.VB_Invoke_Func = " \n20"
 '
 ' I2DB_CODE
 '
@@ -16,6 +18,8 @@ Public Function I2DB_CODE(ByVal value As String)
 End Function
 
 Public Function I2DB_TRIM(ByVal value As String)
+Attribute I2DB_TRIM.VB_Description = "Version of TRIM() that removes all nonprintable characters including non-breaking spaces"
+Attribute I2DB_TRIM.VB_ProcData.VB_Invoke_Func = " \n20"
 '
 ' I2DB_TRIM
 '
@@ -45,7 +49,7 @@ Public Sub RegisterUDFs()
     sFunDescr = "Vectorized version of CODE() that converts each character of a string from Unicode to the default code page of the system and spills results to the right"
     Dim vArgDescr() As Variant
     ReDim vArgDescr(1)
-    vArgDescr = "String to convert"
+    vArgDescr(1) = "String to convert"
         
     Application.MacroOptions _
         Macro:="I2DB_CODE", _
@@ -54,7 +58,7 @@ Public Sub RegisterUDFs()
         ArgumentDescriptions:=vArgDescr
 
     sFunDescr = "Version of TRIM() that removes all nonprintable characters including non-breaking spaces"
-    vArgDescr = "String to trim"
+    vArgDescr(1) = "String to trim"
         
     Application.MacroOptions _
         Macro:="I2DB_TRIM", _
